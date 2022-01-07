@@ -1,0 +1,12 @@
+version: '3.7'
+
+services:
+  ascends:
+    build: .
+    container_name: ascends
+    command: bash -c "while true; do sleep 1; done"
+    # restart: always
+    ports:
+      - '7777:7777'
+    volumes:
+      - ./data:/data
